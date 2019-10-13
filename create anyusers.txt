@@ -1,0 +1,12 @@
+create schema abbyss1;
+create table anyusers
+(
+    id         bigint unsigned auto_increment
+        primary key,
+    first_name varchar(255) not null,
+    last_name  varchar(255) not null,
+    email      varchar(255) not null,
+    password   varchar(255) not null,
+    constraint anyusers_email_uindex
+        unique (email)
+);
